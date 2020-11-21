@@ -34,6 +34,9 @@ console.log(imgCard);
 gallery.append(...imgCard);
 
 
+
+// --------------------- lightbox -----------------------
+
 gallery.addEventListener('click', onGalleryClick)
 
 function onGalleryClick(event){
@@ -49,19 +52,12 @@ function onGalleryClick(event){
 
     const modalImage = document.querySelector('.lightbox__image');
     modalImage.src = ''
-
-    // const preTheImageRef = event.currentTarget.querySelector('lightbox__image');
-
-    // if (preTheImageRef)
     
     const theImageRef = event.target;
     const modalImageURL = theImageRef.dataset.source;
 
     modalImage.src = modalImageURL
 }
-
-
-// --------------------- lightbox -----------------------
 
 const openModal = document.querySelector('.lightbox');
 
